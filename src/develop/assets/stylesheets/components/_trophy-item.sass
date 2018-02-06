@@ -1,0 +1,164 @@
+.post-view, .post-details
+  &.trophy
+    border: 1px solid $color-gold
+    .more
+      &:before
+        color: $color-gold
+
+    .additional-info
+      position: relative
+      float: right
+      color: $color-gold-transparent
+      margin-top: 23px
+
+    .cup-no-winner
+      display: inline-block
+      margin-right: 16px
+      width: 36px
+      height: 36px
+      background:
+        image: url($images_news + 'prize.svg')
+        size: 36px
+        repeat: no-repeat
+        position: 50%
+
+    .title
+      a
+        font-size: 18px
+        color: $color-gold
+        font-weight: bold
+    .prize
+      padding: 24px 24px 0
+      .title
+        font-size: 14px
+        line-height: 1.64
+        letter-spacing: 2px
+        color: $color-gold
+        text-transform: uppercase
+
+      .description
+        width: 89%
+        padding: 0
+        font-size: 14px
+        line-height: 1.5
+      .prize-img
+        +round(10px)
+        cursor: pointer
+        position: relative
+        float: right
+        width: 60px
+        height: 60px
+        overflow: hidden
+        &.default
+          background:
+            image: url($images_news + 'prize-default.svg')
+            size: contain
+            position: 50%
+            repeat: no-repeat
+
+        img
+          +translate(-50%, -50%)
+          position: absolute
+          top: 50%
+          left: 50%
+
+    .trophy-winner
+      padding: 0 24px 0
+      .time-left
+        position: absolute
+        right: 0
+        bottom: 25px
+        display: block
+        font-size: 14px
+        color: $color-gold
+        text-align: right
+
+      .winner-name
+        width: 42%
+        display: inline-block
+        color: $color-gold
+        font-weight: bold
+        font-size: 19px
+        margin-top: 19px
+        margin-bottom: 21px
+
+    .avatar-round
+      +round(50%)
+      height: 40px
+      width: 40px
+      opacity: 1
+      float: left
+      margin-right: 12px
+      background:
+        image: url($images_postIcons + 'default-avatar-105.png')
+        size: contain
+        repeat: no-repeat
+        position: 50%
+      img
+        +round(50%)
+        width: 40px
+        height: 40px
+
+    .info-bar
+      .info
+        color: $color-gold
+
+    .info-bar-details
+      .icons
+        &.challenges
+          background:
+            image: url($images + 'post-icons/challenges-icn-gold.svg')
+            repeat: no-repeat
+            size: contain
+
+    .info-bar-details
+      .icons
+        &.comments
+          background:
+            image: url($images + 'post-icons/comments-gold.svg')
+            repeat: no-repeat
+            size: contain
+
+    .info-bar-details
+      .icons
+        &.likes
+          background:
+            image: url($images + 'post-icons/like-empty-gold.svg')
+            repeat: no-repeat
+            size: contain
+
+    .info-bar-details
+      .icons
+        &.likes.liked
+          background:
+            image: url($images + 'post-icons/like-filled-gold.svg')
+            repeat: no-repeat
+            size: contain
+
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .post-view, .post-details
+    &.trophy
+      .trophy-winner
+        padding: 0 10px
+
+      .additional-info
+        float: none
+        margin-top: 0
+        margin-bottom: 20px
+
+      .trophy-winner
+        .winner-name
+
+          margin: -3px 0 0 0
+
+      .prize
+        padding: 0 10px
+
+        .prize-img
+          margin-top: 10px
+          width: 36px
+          height: 36px

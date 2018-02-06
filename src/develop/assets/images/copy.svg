@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="13px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.396116395">
+        <g id="UС_13-Settings-(filled)" transform="translate(-977.000000, -873.000000)" fill-rule="nonzero" fill="#ECF4FE">
+            <path d="M985.842105,873 L978.263158,873 C977.568421,873 977,873.531818 977,874.181818 L977,882.454545 L978.263158,882.454545 L978.263158,874.181818 L985.842105,874.181818 L985.842105,873 Z M987.736842,875.363636 L980.789474,875.363636 C980.094737,875.363636 979.526316,875.895455 979.526316,876.545455 L979.526316,884.818182 C979.526316,885.468182 980.094737,886 980.789474,886 L987.736842,886 C988.431579,886 989,885.468182 989,884.818182 L989,876.545455 C989,875.895455 988.431579,875.363636 987.736842,875.363636 Z M987.736842,884.818182 L980.789474,884.818182 L980.789474,876.545455 L987.736842,876.545455 L987.736842,884.818182 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

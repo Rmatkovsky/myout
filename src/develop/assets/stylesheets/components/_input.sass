@@ -1,0 +1,75 @@
+input
+  &.field
+    border: 0
+    color: $color-black
+    background: $bgInput
+    width: 100%
+    height: 52px
+    padding: 0 28px 0 20px
+    font-size: 16px
+    margin: 7px 0
+    +round(3px)
+
+    &.fb
+      background:
+        color: $color-blue
+        image: url( $images_socials + 'fb.png')
+        size: 10px, 18px
+        repeat: no-repeat
+        position: 24px, 50%
+    &.submit
+      background: $color-orange
+
+  &.clipboard
+    opacity: 0
+    position: absolute
+
+.app-input-group
+  position: relative
+  display: block
+
+  .app-input-status
+    position: absolute
+    width: 10px
+    height: 10px
+    top: 34px
+    margin-top: -10px
+    right: 18px
+    font-family: $fontIcon
+    &.-success
+      &:after
+        color: $color-success
+        content: "\e013"
+
+    &.-error
+      &:after
+        color: $color-error
+        content: "\e014"
+
+
+.error-msg
+  color: #c74e52
+
+
+/**********************************/
+/***** FOR width 768px ************/
+/**********************************/
+@media only screen and (max-width: 768px)
+  input
+    &.field
+      &.-error
+        border: 2px solid $bgTooltip
+        border-radius: 5px
+
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  input
+    &.field
+      height: 42px
+      font-size: 14px
+  .app-input-group
+    .app-input-status
+      top: 30px

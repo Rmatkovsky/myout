@@ -1,0 +1,212 @@
+.left-menu
+  position: fixed
+  float: left
+  width: 262px
+  margin-top: 28px
+  .icon
+    opacity: .4
+    display: inline-block
+    margin-bottom: 4px
+    margin-right: 21px
+    vertical-align: middle
+    height: 18px
+    width: 18px
+    background:
+      repeat: no-repeat
+      size: contain
+      position: 50%
+
+  .news
+    .icon
+      background:
+        image: url($images_menuIcons + 'news.png')
+      +pixel-ratio
+        background:
+          image: url($images_menuIcons + 'news@2x.png')
+
+  .challenges
+    .icon
+      background:
+        image: url($images_menuIcons + 'challenges-icn.svg')
+      +pixel-ratio
+        background:
+          image: url($images_menuIcons + 'challenges@2x.png')
+
+  .trophy
+    .icon
+      background:
+        image: url($images_menuIcons + 'trophy.png')
+      +pixel-ratio
+        background:
+          image: url($images_menuIcons + 'trophy@2x.png')
+
+  .entertainment
+    .icon
+      background:
+        image: url($images_menuIcons + 'entertainment-icn.svg')
+
+  .sport
+    .icon
+      background:
+        image: url($images_menuIcons + 'sport-icn.svg')
+
+  .extreme
+    .icon
+      background:
+        image: url($images_menuIcons + 'extreme-icn.svg')
+
+  .fun
+    .icon
+      background:
+        image: url($images_menuIcons + 'fun-icn.svg')
+
+  .care
+    .icon
+      background:
+        image: url($images_menuIcons + 'i-care-icn.svg')
+
+  .others
+    .icon
+      background:
+        image: url($images_menuIcons + 'others-icn.svg')
+
+  .main-menu
+    li
+      position: relative
+      min-height: 49px
+      height: 100%
+      line-height: 3.4
+
+      .link
+        display: block
+        width: 100%
+        font-size: 15px
+        color: $color-menu-li
+        height: 100%
+        padding-left: 48px
+        &.active
+          &~.sub-menu
+            display: block
+        &:hover, &:active
+          color: $color-menu-li-active
+          text-decoration: none
+          .icon
+            opacity: 1
+        &.active
+          color: $color-menu-li-active
+          text-decoration: none
+          border-radius: 5px
+          background-color: rgba(236, 244, 254, 0.1)
+
+          &.challenges
+            background: #333b3f
+            +round(5px, top)
+          .icon
+            opacity: 1
+          .sub-menu
+            display: block
+            background: $bgColor-menu-li-active
+
+
+  .sub-menu
+    +round(5px)
+    position: relative
+    display: none
+    background:
+      color: $color-bg-submenu
+
+    li
+      position: relative
+      text-align: left
+
+      a
+        opacity: .4
+        display: block
+        width: 100%
+        left: 0
+        padding-left: 72px
+        height: 49px
+        .icon
+          margin-right: 10px
+        &:hover, &:active, &.active
+          opacity: 1
+          background: #1a2023
+          &:last-child
+            +round(5px, bottom)
+          .icon
+            opacity: 1
+          &.sport
+            color: #5a90ff
+            .icon
+              background:
+                image: url($images_menuIcons + 'sport-active.png')
+              +pixel-ratio
+                background:
+                  image: url($images_menuIcons + 'sport-active@2x.png')
+          &.care
+            color: #53d9cd
+            .icon
+              background:
+                image: url($images_menuIcons + 'care-active.png')
+              +pixel-ratio
+                background:
+                  image: url($images_menuIcons + 'care-active@2x.png')
+          &.entertainment
+            color: #33bc59
+            .icon
+              background:
+                image: url($images_menuIcons + 'entertainment-active.png')
+              +pixel-ratio
+                background:
+                  image: url($images_menuIcons + 'entertainment-active@2x.png')
+          &.extreme
+            color: #de5454
+            .icon
+              background:
+                image: url($images_menuIcons + 'extreme-active.png')
+              +pixel-ratio
+                background:
+                  image: url($images_menuIcons + 'extreme-active@2x.png')
+          &.fun
+            color: #cede3d
+            .icon
+              background:
+                image: url($images_menuIcons + 'fun-active.png')
+              +pixel-ratio
+                background:
+                  image: url($images_menuIcons + 'fun-active@2x.png')
+          &.others
+            color: #a04eb6
+            .icon
+              background:
+                image: url($images_menuIcons + 'others-active.png')
+              +pixel-ratio
+                background:
+                  image: url($images_menuIcons + 'others-active@2x.png')
+
+      .icon
+        left: -28px
+        top: 13px
+
+@media all and (max-width: 992px)
+  .left-menu
+    width: 212px
+
+    .main-menu
+      li
+        .link
+          padding-left: 27px
+
+    .sub-menu
+      li
+        a
+          padding-left: 58px
+
+@media all and (max-width: 768px)
+  .left-menu
+    display: none
+
+@media all and (max-height: 772px)
+  .left-menu
+    &.profile-unfix
+      position: relative

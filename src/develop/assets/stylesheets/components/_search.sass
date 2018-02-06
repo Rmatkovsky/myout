@@ -1,0 +1,116 @@
+.c-search
+  position: relative
+
+  .c-search__icon
+    cursor: pointer
+    position: absolute
+    width: 18px
+    height: 18px
+    top: 13px
+    left: 10px
+    background-image: url($images + 'search-icn.svg')
+    background-size: contain
+
+  .c-search__input
+    display: block
+    width: 100%
+    color: #fff
+    padding: 8px 35px
+    font-size: 17px
+    font-weight: bold
+    line-height: 1
+    border-radius: 10px
+    background-color: $bgColor
+    border: 2px solid $bgColor
+    outline: none
+    -webkit-appearance: none
+    box-shadow: none
+
+    &::-webkit-input-placeholder
+      color: #475055
+
+    &::-moz-placeholder
+      color: #475055
+
+    &:-ms-input-placeholder
+      color: #475055
+
+    &:-moz-placeholder
+      color: #475055
+
+  .c-search__results
+    display: none
+    position: absolute
+    z-index: 10
+    width: 100%
+    border-radius: 10px
+    background-color: $color-dark-gray
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5)
+    margin-top: 8px
+
+    &.active
+      display: block
+
+    ul
+      margin: 0
+
+      li
+        display: block
+        padding: 10px
+        border: none
+
+        a
+          opacity: 1
+          padding: 0
+
+    .c-search__item
+
+      .follow-btn
+        display: none
+
+      .c-search__item__follow-btn
+        display: none
+
+      .c-search__item__user
+        display: flex
+        align-items: center
+
+        .avatar
+          width: 50px
+          height: 50px
+
+          img
+            width: 50px
+            height: 50px
+
+        .c-search__item__name
+          margin-top: 0
+          font-size: 17px
+
+        .c-search__item__additional
+          display: none
+
+
+
+
+/**********************************/
+/***** FOR width 768px ************/
+/**********************************/
+@media only screen and (max-width: 768px)
+  .c-search
+
+    .c-search__results
+      margin-top: 5px
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .c-search
+
+    .c-search__icon
+      top: 8px
+      left: 10px
+
+    .c-search__input
+      padding: 4px 35px

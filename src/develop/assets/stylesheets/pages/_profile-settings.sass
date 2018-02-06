@@ -1,0 +1,248 @@
+.c-settings-container
+  border-radius: 5px
+  background-color: $color-dark-gray
+  padding: 30px 80px 30px 24px
+
+  .c-settings-item
+    width: 100%
+    margin-bottom: 16px
+
+    &::after,&::before
+      display: block
+      content: ""
+      clear: both
+
+    &.avatar-item
+        display: none
+
+    .c-settings-desc
+      position: relative
+      float: left
+      width: 30%
+      margin-top: 5px
+      font-weight: bold
+
+    .c-settings-handlers
+      position: relative
+      float: left
+      width: 70%
+
+      &.pass .input-handler
+        margin-bottom: 8px
+        -webkit-appearance: none
+        box-shadow: none
+
+      &.pass .input-handler:first-child
+        margin-bottom: 16px
+
+      &.flex-form
+        display: flex
+        align-items: start
+
+        .input-handler
+          width: 100%
+          -webkit-appearance: none
+          box-shadow: none
+
+        .btn-accent
+          margin-top: 0
+          margin-left: 16px
+
+      .input-handler
+        &.error
+          input
+            border: 1px solid #c74e52
+            -webkit-appearance: none
+            box-shadow: none
+
+          .error-msg
+            padding: 0 8px
+            margin-top: 4px
+            color: #c74e52
+
+      .btn-accent
+        margin-top: 10px
+        font-weight: bold
+        padding: 6px 18px
+
+      .c-settings-inputs
+        position: relative
+        width: 100%
+        border-radius: 4px
+        background-color: $bgColor
+        border: 2px solid $bgColor
+        outline: none
+        font-size: 14px
+        padding: 4px
+        -webkit-appearance: none
+        box-shadow: none
+
+        &.bio
+          height: 72px
+          resize: none
+
+
+      .c-settings-inputs-counts
+        position: absolute
+        bottom: 10px
+        right: 8px
+        font-size: 9px
+        opacity: .25
+
+
+      .c-settings-checkbox
+        margin-top: 5px
+
+        &::after
+          clear: both
+          display: table
+          content: ''
+
+        .label-checkbox
+          color: #fcfcfc
+          opacity: 0.4
+          font-weight: 100
+
+      .checkbox-custom, .label-checkbox
+        margin-right: 10px
+
+
+        .label
+          font-size: 14px
+          font-weight: 100
+          opacity: .4
+
+
+      button.custom-btn
+        margin-top: 0
+        width: 184px
+        height: 32px
+        padding: 0 16px 0 36px
+        font-size: 14px
+
+        &.fb
+          background-position: 14px,50%
+          font-weight: bold
+
+      .promo-area
+        padding: 16px
+        border-radius: 4px
+        text-align: center
+        background: $bgColor
+
+        .promo-info
+          max-width: 240px
+          margin: 0 auto
+
+        .promo-code
+          position: relative
+          font-size: 28px
+          color: $accent
+          text-transform: uppercase
+          cursor: pointer
+
+          input
+            display: inline-block
+            background: none
+            border: none
+            outline: none
+            width: 100px
+            text-align: center
+            -webkit-appearance: none
+            box-shadow: none
+            font-weight: bold
+            letter-spacing: 4px
+
+
+          .icon
+            display: inline-block
+            width: 15px
+            height: 15px
+            line-height: 13px
+
+            &.copy
+              background:
+                image: url($images + "copy.svg")
+                repeat: no-repeat
+                size: contain
+
+
+/**********************************/
+/***** FOR width 768px ************/
+/**********************************/
+@media only screen and (max-width: 768px)
+  .c-settings-container
+    .c-settings-item
+
+      &.avatar-item
+        display: block
+
+        .btn-accent
+          margin: 0 0 0 40px
+
+        .c-settings-handlers
+          display: flex
+          align-items: center
+
+      .c-settings-desc
+        margin-bottom: 8px
+
+      .c-settings-avatar
+        display: inline-block
+        width: 93px
+        height: 93px
+        border-radius: 10px
+        overflow: hidden
+        background:
+          image: url($images_postIcons + 'default-avatar-105.png')
+          repeat: no-repeat
+          size: contain
+
+        img
+          width: 93px
+          height: 93px
+          object-fit: cover
+
+    .change-desc
+      position: relative
+      color: #ecf4fe
+      font-size: 14px
+      border: none
+      display: inline-block
+      border-radius: 5px
+      background-color: #e95f3a
+      padding: 6px 18px
+      margin-left: 30px
+
+    .upload
+      display: block
+      opacity: 0
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .c-settings-container
+    padding: 16px
+
+    .c-settings-item
+
+      .c-settings-handlers
+        .btn-accent
+          margin-top: 0
+
+        .c-settings-checkbox
+          .checkbox-custom
+            float: left
+
+          .label-checkbox
+            width: 85%
+
+      .c-settings-handlers, .c-settings-desc
+        width: 100%
+

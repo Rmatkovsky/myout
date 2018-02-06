@@ -1,0 +1,146 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus
+  border: 0
+  -webkit-text-fill-color: black
+  -webkit-box-shadow: 0 0 0 1000px white inset
+  transition: background-color 5000s ease-in-out 0s
+
+video::-internal-media-controls-download-button
+    display: none
+
+video::-webkit-media-controls-enclosure
+  overflow: hidden
+
+video::-webkit-media-controls-panel
+  width: calc(100% + 30px)
+
+html
+  position: relative
+  min-height: 100%
+body
+  margin-bottom: 120px
+html, body
+  background: $bgColor
+  font-family: $fontFamily
+  font-weight: 100
+  color: $color-white
+
+.app-layout
+  padding-top: 83px
+
+a
+  color: $color-white
+  &:hover, &:focus, &:link, &:visited, &:active
+    color: $color-href-hover
+    text-decoration: none
+
+
+p
+  &.notice
+    font-size: 24px
+    color: $bgInput
+    text-align: center
+    margin: 0 auto
+
+.text-error
+  font-size: 16px
+  color: $color-error
+  text-align: center
+
+.app-content
+  height: 100%
+  margin-top: -103px
+  a
+    color: $color-orange
+
+
+.hide
+  display: none !important
+
+.hidden
+  display: block !important
+  visibility: hidden !important
+
+.blur_content
+  filter: blur(30px)
+
+.no-connection-mobile
+  display: none
+  position: fixed
+  z-index: 10
+  padding: 8px 0
+  width: 100%
+  background-color: #a34044
+  font-size: 14px
+  color: #fff
+  text-align: center
+
+
+/* Let's get this party started */
+::-webkit-scrollbar
+  width: 5px
+
+
+/* Track */
+::-webkit-scrollbar-track
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+  -webkit-border-radius: 10px
+  border-radius: 10px
+
+
+/* Handle */
+::-webkit-scrollbar-thumb
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  background: $bgColor
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+
+::-webkit-scrollbar-thumb:window-inactive
+  background: #2e383c
+
+
+.main-container
+  +clearfix()
+  position: relative
+  width: 950px
+  margin: 0 auto 0
+
+
+/***** FOR width 992px ************/
+/**********************************/
+@media screen and (max-width: 992px)
+  .main-container
+    width: 940px
+
+/***** FOR width 768px ************/
+/**********************************/
+@media only screen and (max-width: 768px)
+  .app-layout
+    padding-top: 52px
+
+  .main-container
+    float: none
+    width: 100%
+    padding: 0 15px
+
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  html
+    height: inherit
+  body
+    margin-bottom: 65px
+
+  p
+    &.notice
+      font-size: 16px
+      color: $bgInput
+      text-align: center

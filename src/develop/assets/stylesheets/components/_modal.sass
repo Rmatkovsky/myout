@@ -1,0 +1,250 @@
+.modal
+  display: block
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background-color: rgba(31, 40, 43, 0.43)
+  .close
+    position: absolute
+    right: 32px
+    top: 32px
+    width: 30px
+    height: 30px
+    opacity: 1
+    &:before, &:after
+      position: absolute
+      left: 17px
+      content: ' '
+      height: 37px
+      width: 1px
+      background-color: $color-white
+    &:before
+      transform: rotate(45deg)
+    &:after
+      transform: rotate(-45deg)
+
+  .modal-container
+    position: absolute
+    display: block
+    width: 760px
+    height: 480px
+    background:
+      color: rgba(46, 56, 60, 0.8)
+    top: 50%
+    left: 50%
+    +translate(-50%, -50%)
+
+    .content
+      position: absolute
+      display: block
+      top: 50%
+      left: 50%
+      +translate(-50%, -50%)
+
+
+      .title
+        font-size: 36px
+        font-weight: 500
+        line-height: 1.33
+        margin-bottom: 36px
+        display: block
+
+
+      textarea
+        width: 560px
+        height: 169px
+        border-radius: 10px
+        border: 1px solid #ecf4fe
+        background: transparent
+        display: block
+        resize: none
+        outline: none
+        opacity: .3
+        padding: 14px
+        font-size: 18px
+        margin-bottom: 50px
+        +placeholder(#ffffff)
+
+    .verify-input
+      display: block
+      width: 100%
+      border-radius: 10px
+      margin-bottom: 30px
+      text-align: center
+      font-size: 22px
+      padding: 6px
+      border: 2px solid rgba(255, 255, 255, 0.3)
+      background-color: transparent
+      outline: none
+
+    .btn
+      width: inherit
+      height: 48px
+      font-size: 16px
+      font-weight: 100
+      padding: 0 54px
+      +round(10px)
+
+      &.code
+        color: $accent
+        font-weight: bold
+
+      &.submit
+        float: right
+
+      &.cancel, &.cancel-2
+        display: none
+
+      &.close-modal
+        padding: 0 64px
+        float: inherit
+
+    .error-msg
+      margin-top: -20px
+      text-align: center
+
+    .download-btn
+      display: inline-block
+      margin: 0 5px
+      width: 160px
+      height: 45px
+
+      &.appstore
+        background:
+          image: url($images_socials + 'appstore.svg')
+          repeat: no-repeat
+          size: contain
+
+      &.play
+        background:
+          image: url($images_socials + 'google-play.svg')
+          repeat: no-repeat
+          size: contain
+
+  .report--img-success
+    margin: 0 auto
+    width: 61px
+    height: 61px
+    background:
+      image: url($images + '/report/success.png')
+      size: contain
+      repeat: no-repeat
+    +pixel-ratio
+      background:
+        image: url($images + '/report/success@2x.png')
+
+  .report--img-exclamation
+    margin: 0 auto
+    width: 61px
+    height: 61px
+    background:
+      image: url($images + '/report/exclamation-icn.svg')
+      size: contain
+      repeat: no-repeat
+
+  .report--text
+    margin: 30px 0 60px 0
+    display: block
+    font-size: 20px
+    line-height: 1.65
+
+
+  .media-popup
+    .prev, .next
+      cursor: pointer
+      position: absolute
+      top: 50%
+      width: auto
+      padding: 16px
+      margin-top: -50px
+      color: white
+      font-weight: bold
+      font-size: 20px
+      transition: 0.6s ease
+      border-radius: 0 3px 3px 0
+      user-select: none
+      -webkit-user-select: none
+
+    .next
+      right: 0
+      border-radius: 3px 0 0 3px
+
+    .prev:hover,
+    .next:hover
+      background-color: rgba(0, 0, 0, 0.8)
+
+@media all and (max-width: 768px)
+  .modal
+    .modal-container
+      width: 80%
+
+      .btn
+        padding: 0 34px
+
+      .download-btn
+        width: 140px
+        height: 40px
+
+@media all and (max-width: 544px)
+  .modal
+
+    .report--text
+      margin-bottom: 12px
+
+    .modal-container
+      width: 90%
+      height: 370px
+      border-radius: 5px
+      background-color: #1f282b
+
+      &.apps
+        height: 405px
+
+      .verify-input
+        width: 80%
+        margin: 0 auto 23px auto
+
+      .btn
+        width: 125px
+        padding: 0
+
+        &.close-modal
+          padding: 0
+
+        &.cancel
+          display: block
+          float: left
+          background-color: #2e383c
+          color: #ecf4fe
+
+        &.cancel-2
+          display: block
+          margin: 0 auto
+          background-color: transparent
+          font-weight: bold
+          color: #ecf4fe
+
+      .close
+        display: none
+
+      .content
+        width: 90%
+
+        &.verify
+          .btn
+            width: 154px
+            float: none
+            display: block
+            margin: 5px auto
+            font-weight: bold
+
+        .title
+          font-size: 20px
+          margin-bottom: 10px
+
+        textarea
+          width: 100%
+          margin-bottom: 10px
+          height: 244px

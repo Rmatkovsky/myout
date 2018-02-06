@@ -1,0 +1,84 @@
+.privacy__wrap, .terms__wrap
+  position: relative
+  min-height: 700px
+  max-width: 1139px
+  background-color: #262f33
+  border-radius: 5px
+  padding: 50px 20px
+  margin-top: 42px
+
+  .privacy__container, .terms__container
+    max-width: 945px
+    margin: 0 auto
+
+    .privacy__title, .terms__title
+      margin: 0
+      text-align: center
+      font-family: Lato, sans-serif
+      font-size: 30px
+      color: #ecf4fe
+
+    .privacy__desc
+      margin-top: 5px
+      text-align: center
+      font-family: Lato, sans-serif
+      font-style: italic
+      font-size: 20px
+      color: #ecf4fe
+
+    .privacy__section, .terms__section
+      margin-top: 40px
+
+      a
+        color: #ecf4fe
+        text-decoration: underline
+
+      p
+        font-family: Lato, sans-serif
+        font-size: 15px
+        line-height: 1.53
+        text-align: left
+        color: #ecf4fe
+        margin-bottom: 40px
+
+        &:last-child
+          margin-bottom: 0
+
+      .privacy__p-title, .terms__section-title
+        display: block
+        font-family: Lato, sans-serif
+        font-weight: bold
+        font-size: 18px
+        color: #ecf4fe
+
+      .terms__section-title
+        margin-bottom: 40px
+
+      .privacy__list-items
+        margin-top: -30px
+        color: #ecf4fe
+        padding-left: 30px
+        font-size: 15px
+        line-height: 1.53
+
+        li
+          padding-left: 5px
+          list-style-type: disc
+
+
+@media all and (max-width: 768px)
+  .privacy__wrap, .terms__wrap
+    background-color: transparent
+    padding: 40px 20px
+
+@media all and (max-width: 544px)
+  .privacy__wrap, .terms__wrap
+
+    .privacy__container, .terms__container
+
+      .privacy__title, .terms__title
+        font-size: 22px
+
+      .privacy__desc
+        font-size: 15px
+        margin-bottom: -20px

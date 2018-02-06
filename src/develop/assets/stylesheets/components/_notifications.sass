@@ -1,0 +1,110 @@
+.post-notifications__item
+  padding: 16px
+  background-color: $color-dark-gray
+  border-radius: +round(5px)
+  margin: 8px 0
+
+  &.trophy
+    border: 1px solid $color-gold
+    color: $color-gold
+
+    .post-notifications__author-img, .post-notifications__event-img
+      width: 50px
+      height: 50px
+      background:
+        image: url($images_postIcons + 'big-cup-icn.svg')
+        repeat: no-repeat
+        size: 70%
+        position: center
+
+    .post-notifications__event-img
+      margin-left: auto
+
+  .post-notifications__btns
+    text-align: center
+    margin-top: 22px
+
+    button:not(:last-child)
+      margin-right: 24px
+
+  .post-notifications__data
+    font-size: 14px
+    opacity: .4
+
+  .post-notifications__list
+    display: flex
+
+  .accept-warning
+    display: table
+    margin: auto
+    padding: 5px 0 0 30px
+    color: #ecf4fe
+    font-size: 14px
+    background:
+      image: url($images + 'alert.svg')
+      repeat: no-repeat
+      size: 20px
+      position: 0 6px
+
+  .post-notifications__info
+    padding: 0 16px
+    font-size: 18px
+
+    .post-notifications__author-name
+      font-weight: bold
+
+    .post-notifications__events-list
+      margin-top: 14px
+
+      ul
+        margin: 0
+
+        li
+          display: inline-block
+          margin-right: 8px
+
+          img
+            width: 40px
+            height: 40px
+            border-radius: +round(10px)
+
+    .some-action
+      color: rgba(236, 244, 254, 0.5)
+
+  .post-notifications__author-img, .post-notifications__event-img
+    img
+      border-radius: +round(10px)
+      width: 50px
+      height: 50px
+      object-fit: cover
+
+  .post-notifications__event-img
+    margin-left: auto
+
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .post-notifications__item
+    padding: 8px
+
+    .post-notifications__btns
+      display: flex
+      justify-content: space-between
+      margin-top: 12px
+
+    .accept-warning
+      margin-top: 10px
+
+    .post-notifications__author-img, .post-notifications__event-img
+      img
+        width: 30px
+        height: 30px
+
+    .post-notifications__info
+      .post-notifications__events-list
+        ul
+          li
+            margin-bottom: 8px
+

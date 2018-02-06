@@ -1,0 +1,65 @@
+.tooltip
+  position: absolute
+  top: 6px
+  &.right
+    left: 100%
+
+    .tooltip-arrow
+      margin-top: -10px
+      border-right-color: $bgTooltip
+      border-width: 10px 10px 10px 0
+
+  .tooltip-inner
+    display: table-cell
+    background: $bgTooltip
+    color: $color-tooltip
+    font-family: $fontFamily
+    font-weight: 100
+    font-size: 16px
+    height: 54px
+    min-width: 300px
+    max-width: 360px
+    text-align: left
+    padding: 8px 27px
+    margin-left: 5px
+    vertical-align: middle
+
+/**********************************/
+/***** FOR width 970px ************/
+/**********************************/
+@media only screen and (max-width: 970px)
+  .tooltip
+    .tooltip-inner
+      min-width: 273px
+
+/**********************************/
+/***** FOR width 768px ************/
+/**********************************/
+@media only screen and (max-width: 768px)
+  .tooltip
+    position: static
+    &.right
+      padding: 0
+
+    .tooltip-arrow
+      display: none
+
+    .tooltip-inner
+      background: transparent
+      padding: 8px 0
+      height: 17px
+      font-size: 14px
+      color: #c74d51
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .tooltip
+    .tooltip-inner
+      background: transparent
+      padding: 0
+      height: 15px
+      font-size: 12px
+      color: #c74d51
+      min-width: 266px

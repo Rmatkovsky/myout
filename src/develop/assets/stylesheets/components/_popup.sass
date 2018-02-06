@@ -1,0 +1,100 @@
+.popup
+  position: absolute
+  display: table
+  width: 750px
+  min-width: 700px
+  height: 385px
+  border-radius: 5px
+  background-color: $bgPopup
+  top: 50%
+  left: 50%
+  z-index: 99
+  padding: 0 140px
+  +translate(-50%, -50%)
+
+  .close
+    background: $bgPopupClose
+    position: absolute
+    width: 52px
+    height: 52px
+    border-radius: 50%
+    top: 0
+    opacity: 1
+    right: -85px
+
+    &:before, &:after
+      position: absolute
+      left: 25px
+      top: 15px
+      content: ' '
+      height: 23px
+      width: 3px
+      border-radius: 5px
+      background-color: $color-tooltip
+
+    &:before
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
+
+
+  .container
+    display: table-cell
+    text-align: center
+    vertical-align: middle
+    font-size: 30px
+    width: 100%
+
+    input, button
+      &.custom-btn
+        width: 80%
+        margin-top: 60px
+        &.cancel
+          display: none
+
+/**********************************/
+/***** FOR width 970px ************/
+/**********************************/
+@media only screen and (max-width: 970px)
+  .popup
+    width: 555px
+    min-width: 500px
+    padding: 0 20px
+
+/**********************************/
+/***** FOR width 750px ************/
+/**********************************/
+@media only screen and (max-width: 750px)
+  .popup
+    width: 400px
+    height: 300px
+    min-width: 390px
+    padding: 0 9px
+
+    .container
+      font-size: 24px
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .popup
+    width: 90%
+    min-width: 280px
+    padding: 0
+    height: 175px
+
+    .close
+      display: none
+    .container
+      font-size: 16px
+      p
+        padding: 20px
+
+      input, button
+        width: 80%
+        &.custom-btn
+          margin-top: 0
+          &.cancel
+            display: inline

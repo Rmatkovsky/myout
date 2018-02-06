@@ -1,0 +1,305 @@
+.post-details
+  +round(5px)
+  position: relative
+  background: #2e383c
+  width: 100%
+  display: flex
+  align-items: stretch
+  min-height: 325px
+  .close
+    background: $bgPopupClose
+    position: absolute
+    width: 52px
+    height: 52px
+    border-radius: 50%
+    top: 0
+    opacity: 1
+    right: -96px
+
+    &:before, &:after
+      position: absolute
+      left: 25px
+      top: 15px
+      content: ' '
+      height: 23px
+      width: 3px
+      border-radius: 5px
+      background-color: $color-tooltip
+
+    &:before
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
+
+  .info
+    width: 653px
+    flex-grow: 1
+  .comments
+    +round(5px, right)
+    position: relative
+    width: 292px
+    height: auto
+    background:
+      color: #252f33
+  .comment-items-block
+    top: 52px
+    bottom: 46px
+    position: absolute
+    padding: 0 15px
+    height: auto
+    width: 100%
+    overflow: auto
+
+  .info-bar-details
+    display: flex
+    justify-content: flex-end
+    width: 100%
+    left: 0
+    bottom: 0
+    height: 52px
+    padding: 16.5px 0 17.5px 0
+    border-bottom: 1px solid #2e383b
+    margin: 0
+
+    > li
+      position: relative
+      width: 27%
+      text-align: center
+      color: #7e858a
+      &:first-child
+        color: #e95f3a
+      &:last-child
+        width: 19%
+    &.trophy
+      > li
+        color: $color-gold
+
+    .icons
+      display: inline-block
+      width: 19px
+      height: 19px
+      vertical-align: bottom
+      margin-right: 6px
+      background:
+        size: contain
+        repeat: no-repeat
+        position: 50%
+
+      &.likes
+        cursor: pointer
+        background:
+          image: url($images_postIcons + 'like.png')
+        +pixel-ratio
+          background:
+            image: url($images_postIcons + 'like@2x.png')
+        &.liked
+          background:
+            image: url($images_postIcons + 'like-active.png')
+          +pixel-ratio
+            background:
+              image: url($images_postIcons + 'like-active@2x.png')
+
+      &.comments
+        background:
+          image: url($images_postIcons + 'comments.png')
+        +pixel-ratio
+          background:
+            image: url($images_postIcons + 'comments@2x.png')
+
+      &.challenges
+        background:
+          image: url($images_postIcons + 'challenges.png')
+        +pixel-ratio
+          background:
+            image: url($images_postIcons + 'challenges@2x.png')
+
+  .comment-write
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 0 15px
+    width: 100%
+    height: 46px
+    border-top: 1px solid #2e383b
+
+    &.sign-in
+      display: flex
+      align-items: center
+      justify-content: center
+
+      span
+        opacity: .5
+
+    textarea
+      width: 81%
+      background: transparent
+      border: none
+      resize: none
+      height: 30px
+      margin-left: 10px
+      line-height: 1
+      outline: none
+      color: #7e858a
+      font-size: 14px
+    .avatar
+      position: relative
+      display: inline-block
+      width: 30px
+      height: 42px
+      background:
+        image: url($images_postIcons + 'default-avatar-50.png')
+        size: contain
+        repeat: no-repeat
+        position: 0 8px
+      +pixel-ratio
+        background:
+          image: url($images_postIcons + 'default-avatar-50@2x.png')
+      +round(5px)
+      img
+        +round(5px)
+        position: absolute
+        top: 8px
+        height: 30px
+        width: 30px
+
+.more
+  ul
+    bottom: inherit
+    top: 100%
+    margin-top: 18px
+    z-index: 10
+
+
+@media all and (max-width: 992px)
+  .post-details
+    .close
+      right: -75px
+
+    .comments
+      width: 420px
+
+@media all and (max-width: 768px)
+  .more
+    .more-menu
+      &.active
+        position: fixed
+        top: 50%
+        bottom: auto
+        left: 50%
+        z-index: 1050
+        transform: translate(-50%,-50%)
+        border-radius: 5px
+        background-color: #2e383c
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5)
+        font-size: 24px
+        width: 100%
+        max-width: 400px
+        padding: 0
+
+        li
+          padding: 28px 20px
+          border-bottom: 1px solid rgba(236, 244, 254, 0.1)
+
+          &:last-child
+            border-bottom: none
+
+    .more-menu-mask.active
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 100
+      background: url($images + 'bg.jpg') no-repeat
+      background-size: cover
+
+  .post-details
+    flex-direction: column
+    transition: .5s
+    background: none
+
+    .comment-items-block
+      position: static
+      padding: 0
+      background-color: $bgColor
+
+    .info-bar-details
+      display: flex
+      justify-content: flex-end
+      border-radius: 0 0 5px 5px
+      border-bottom: none
+      padding-right: 15px
+      background: #2e383c
+
+      & > li, & > li:last-child
+        width: auto
+        padding: 0 10px
+
+      .info-bar-details__challenges
+        position: absolute
+        left: 15px
+        order: 0
+
+      .info-bar-details__comments
+        order: 2
+
+      .info-bar-details__like
+        order: 1
+
+      .info-bar-details__more
+        order: 3
+
+    .close
+      position: fixed
+      right: 13px
+      top: 0
+      left: auto
+      background-color: transparent
+      z-index: 100
+
+    &.item
+      .more
+        height: 20px
+        ul
+          top: 50%
+
+    .comments
+      width: 100%
+      border-radius: 5px
+      background: none
+
+    .info
+      width: 100%
+      background: #2e383c
+      border-radius: 5px 5px 0 0
+
+    .comment-write
+      position: static
+      padding: 0
+      background-color: $bgColor
+      margin-top: 10px
+
+@media all and (max-width: 544px)
+  .more
+    .more-menu
+      &.active
+        width: 90%
+        font-size: 18px
+
+        li
+          padding: 17px 20px
+
+  .post-details
+    .category-icons
+      left: auto
+
+    .info-bar-details
+      padding-right: 0
+
+      .info-bar-details__challenges
+        left: 0
+
+    .close
+      position: fixed
+      right: 5px

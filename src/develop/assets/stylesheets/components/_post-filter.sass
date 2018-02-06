@@ -1,0 +1,160 @@
+.post-filter__wrap
+  position: fixed
+  width: 655px
+  background-color: $bgColor
+  z-index: 10
+  margin-left: -1px
+  top: 82px
+  text-align: center
+
+  &.m-inline
+
+    .post-filter
+      text-align: center
+
+
+.post-filter
+  position: relative
+  width: 100%
+  text-align: left
+  margin: 0 0 0
+
+  .filter-mobile
+    display: none
+
+  .filter-list
+    margin-bottom: 0
+    padding: 23px 0
+
+  .button-link
+    +round(15px)
+    background: transparent
+    outline: none
+    width: 130px
+    font-size: 14px
+    font-weight: 100
+    line-height: 1.29
+    color: $color-tooltip
+    text-align: center
+    &:hover, &:active
+      text-decoration: none
+    &:focus
+      outline: 0
+    &.active
+      box-shadow: none
+      background:
+        color: $active-filter-btn
+
+  &.acceptance
+    .button-link
+      +round(100px)
+      width: 106px
+
+.filter-type
+  position: absolute
+  right: 1.7%
+  top: 30px
+  font-size: 14px
+  cursor: pointer
+  z-index: 98
+  .more-menu
+    bottom: inherit
+    right: -2px
+    z-index: 99
+    top: 0
+
+@media all and (max-width: 992px)
+  .post-filter__wrap
+    width: 700px
+    top: 82px
+
+@media all and (max-width: 768px)
+  .post-filter__wrap
+    width: 768px
+    left: 0
+    transition: transform .5s
+    height: 78px
+    top: 52px
+
+    &.disable
+      transform: translateY(-500px)
+      transition: transform .5s
+
+    &.m-unfix
+      width: 100%
+      position: static
+
+  .filter-type
+    right: 30px
+
+  .post-filter
+    text-align: center
+
+@media all and (max-width: 544px)
+  .post-filter__wrap
+    width: 100%
+    padding-top: 15px
+    top: 52px
+    height: 52px
+
+    &.m-inline
+      .filter-list
+        padding: 0
+        margin-top: -5px
+
+
+    &.m-dropdown
+      .post-filter
+        position: static
+        display: inline-block
+        width: auto
+
+        .filter-list
+          display: none
+          //display: block
+          position: absolute
+          left: 0
+          right: 0
+          box-shadow: 0 14px 16px 0 rgba(0, 0, 0, 0.5)
+          background-color: #1f282b
+          border-radius: 0
+          padding: 10px 0
+          z-index: 99
+
+          li
+            display: block
+            padding: 5px 20px
+            width: 100%
+            color: #ecf4fe
+            opacity: 0.5
+
+            &:hover
+              background-color: #4b555a
+
+        .button-link
+          text-align: left
+          &.active
+            background-color: inherit
+            border-radius: 0
+
+        .filter-mobile
+          display: block
+
+      .filter-type
+        display: inline-block
+        position: static
+        margin: 0 0 20px 40px
+
+        .more-menu
+          top: auto
+          left: 0
+          right: 0
+          box-shadow: 0 14px 16px 0 rgba(0, 0, 0, 0.5)
+          background-color: #1f282b
+          border-radius: 0
+
+          li
+            color: #ecf4fe
+            opacity: .5
+
+

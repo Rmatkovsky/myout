@@ -1,0 +1,68 @@
+.search-p
+  .post-filter
+    text-align: center
+
+    .button-link
+      margin-right: 54px
+
+
+.user-profile__menu
+  margin-top: 20px
+
+  .user-profile__item
+    display: block
+    padding: 15px 0 15px 50px
+    font-size: 15px
+    color: $color-tooltip
+    opacity: .4
+    cursor: pointer
+
+    &.active
+      background-color: rgba(236,244,254,.1)
+      opacity: 1
+      border-radius: 5px
+
+    i
+      width: 18px
+      height: 18px
+      display: inline-block
+      margin:
+        right: 20px
+        bottom: -3px
+
+    .icon-settings
+      background:
+        image: url($images + 'settings-icn.svg')
+        repeat: no-repeat
+        size: contain
+
+    .icon-notifications
+      background:
+        image: url($images + 'notification-r-icn.svg')
+        repeat: no-repeat
+        size: contain
+
+    .icon-credits
+      background:
+        image: url($images + 'credits-icn.svg')
+        repeat: no-repeat
+        size: contain
+
+
+.search__results__list
+  border-radius: 10px
+  overflow: hidden
+
+  li
+    padding: 20px 30px
+    background-color: $color-dark-gray
+
+
+    &:not(:last-child)
+      border-bottom: 1px solid rgba(236, 244, 254, 0.1)
+
+@media all and (max-width: 544px)
+  .search-p
+    .post-filter
+      .button-link
+        margin-right: 0

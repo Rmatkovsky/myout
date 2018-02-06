@@ -1,0 +1,129 @@
+.invite-chal__container
+  position: relative
+  margin-top: 79px
+  background-color: $color-dark-gray
+  padding: 20px 25px
+  border-radius: 10px
+
+  .close
+    background: $bgPopupClose
+    position: absolute
+    width: 52px
+    height: 52px
+    border-radius: 50%
+    top: 0
+    opacity: 1
+    right: -75px
+
+    &:before, &:after
+      position: absolute
+      left: 25px
+      top: 15px
+      content: ' '
+      height: 23px
+      width: 3px
+      border-radius: 5px
+      background-color: $color-tooltip
+
+    &:before
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
+
+  .invite-chal__col
+    float: left
+    width: 50%
+    padding: 0 25px
+
+    &:last-child .invite-chal__item
+      border: none
+
+  .invite-chal__item
+    padding: 25px 0
+    border-bottom: 1px solid rgba(236,244,254,.1)
+
+    .invite-chal__name
+      margin-top: 5px
+      font-size: 22px
+      font-weight: bold
+      color: $color-tooltip
+
+    .invite-chal__avatar
+      width: 100px
+      height: 100px
+      margin-right: 20px
+      float: left
+      border-radius: 6px
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAzpJREFUaAXtWs9rE1EQnpekzSbWWjUildJqG+jFSyFKwVaLFevJf0H04FVBelDqvaCeFPwDxKuCt4LFShAvxeBVWipabIXUomKaNNk8Z5IsaWKyze7MtolkYLM/3sw3872Zl327+xSU5Nzk1Hge9DSAimmte63rzbhXSq0B6EUfqAfv5ufiFKOffkYnp+5h8M/wcBi3g3StyYViHNZKXesbjOZWV5bjijJhAiyA1r4mD752eErlMRsTgUI5aWhNEkQNE5BXMI0EVKw21Va6qmK+Zh/YjXQncWjdkqpi2CZS1SH7ftrOyL6noCqAdkaqOmTfTwNeRXAhnIPxcBainfmCi6VtH8RTHfA25Y1LcVRDabhzNANnQ7mKPjoTMoG2sXAAHm0EIa1VRTv3RHyMXO/Z/ofEziCJIOlIiyiRoY48XOnK7hoj6ZCupIgSOW1UlpNdoE507XCsNlEi/Q562YmuFazdXpTIeq5xOCe6dgSstsY9WxY2+0+ZwpOzjUa5yYlu2ar+kSiRj0gkkd6dzAfUIV1JESVCgT3eNOBbtj4stT1BHWmp79Glp42cgtvfw/DydyckzfJNj45f4LVb6yEgHWlRoxcva2nQnXiHfEX4n/iGwEsRn6JYwZ7Av+Iobkf8RSI/MCNLWFZ2ZWfZutmLEvGDhksHTLjanYG+QO1Er2JZvfoVhNd//GCCXJbESqsXA78b2YKBBm+KnzE7s8kQrAmNF5HBTvOmh8dTDZOg0jlZspGac7GJHMYxMHMsDV2lQe2kvsmGbAmDK2wiN3oyOKDdz2TJljC4wiJC5XEenwS5QhiExREWkTEBElbwXCwWkREDP0gICReLRSTCGBvV/LlYLCIGy7qSCheLFUpiS24qzsViTVGebgbxOxHASNAEw8V9hHKSxslkAp9NCliVSXJ0xiJCM9rZpPyzhSMGJWVWablx6JVNm4hXPesWt50Rtz3nld3/k5HiAhWv+mlvcIkDZkQv7o07L73gSiFaKgS4MMVLN55iY+zEwf91ZflL/6khE5cMTaBDudcankZfAi8m4P77+bnnhVkfkokPDEbfII0I1ls3qjX1mi0aE0rBgh/UTSJBtP4CE7Dhv6z4wMEAAAAASUVORK5CYII=)
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: 50%
+
+      img
+        width: 100px
+        height: 100px
+        border-radius: 6px
+
+    .btn-accent
+      margin-top: 15px
+
+      &.disabled
+        background-color: rgba(236, 244, 254, 0.1)
+
+
+/**********************************/
+/***** FOR width 992px ************/
+/**********************************/
+@media only screen and (max-width: 992px)
+  .invite-chal__container
+    margin: 79px auto
+    width: 780px
+
+/**********************************/
+/***** FOR width 768px ************/
+/**********************************/
+@media only screen and (max-width: 768px)
+  .invite-chal__container
+    width: 100%
+
+    .close
+      position: fixed
+      right: 13px
+      top: 0
+      left: auto
+      background-color: transparent
+      z-index: 100
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .invite-chal__container
+    margin-top: 52px
+    padding: 0
+
+    .close
+      right: 3px
+
+    .invite-chal__col
+      width: 100%
+      padding: 0
+
+    .invite-chal__item
+      padding: 10px
+
+      .invite-chal__name
+        font-size: 17px
+
+      .invite-chal__avatar
+        width: 70px
+        height: 70px
+
+        img
+          width: 70px
+          height: 70px
+
+      .btn-accent
+        padding: 3px 15px
+        margin-top: 5px

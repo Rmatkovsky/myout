@@ -1,0 +1,66 @@
+.c-credits-title
+  font-size: 18px
+  margin-top: -80px
+  border-bottom: 1px solid rgba(236, 244, 254, 0.1)
+  padding: 27px 0
+  font-weight: bold
+
+.c-credits-wrap
+  margin-top: 80px
+  text-align: center
+
+  .icon
+    display: inline-block
+    width: 76px
+    height: 90px
+
+    &.credits-big
+      background:
+        image: url($images + 'credits-big.svg')
+        repeat: no-repeat
+        size: contain
+
+  .c-credits-info
+    margin: 20px auto
+    max-width: 308px
+
+    p
+      font-size: 23px
+      margin: 0
+
+    .c-credits-count
+      color: $accent
+      font-weight: bold
+
+
+/**********************************/
+/***** FOR width 992px ************/
+/**********************************/
+@media only screen and (max-width: 992px)
+  .c-credits-title
+    display: none
+
+/**********************************/
+/***** FOR width 768px ************/
+/**********************************/
+@media only screen and (max-width: 768px)
+  .c-credits-wrap
+    margin-top: 160px
+
+  .c-credits-title
+    margin-top: 0
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .c-credits-wrap
+    margin-top: 116px
+
+    .icon
+      width: 42px
+      height: 50px
+
+    .c-credits-info
+      p
+        font-size: 17px

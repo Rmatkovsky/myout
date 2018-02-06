@@ -1,0 +1,116 @@
+input, button
+  &.custom-btn
+    background: $color-bg-button
+    border: 0
+    color: $color-font-button-opacity
+    width: 100%
+    height: 52px
+    padding: 0 28px 0 20px
+    font-size: 18px
+    margin: 7px 0
+    +round(3px)
+
+    &.fb
+      color: $color-font-button
+      background:
+        color: $color-blue
+        image: url( $images_socials + 'fb.png')
+        size: 10px, 18px
+        repeat: no-repeat
+        position: 24px, 50%
+    &.submit
+      color: $color-font-button
+      background: $color-orange
+
+  &.facebook-btn
+    background: transparent
+    border: none
+    padding: 0
+    outline: none
+
+  &:disabled
+    opacity: .2
+
+.group-button
+  display: inline-block
+  width: 100%
+
+  .custom-btn
+    width: 47%
+
+.btn-accent, .follow-btn
+  color: $color-tooltip
+  font-size: 14px
+  border: none
+  display: inline-block
+  padding: 8px 0
+  border-radius: 5px
+  background-color: $active-filter-btn
+
+.btn-accent
+  width: 96px
+
+.follow-btn
+  width: 126px
+
+  &.unfollow
+    background-color: rgba(236, 244, 254, 0.1)
+
+
+.delete-btn, .delete-all-btn
+  border: none
+  padding: 6px 30px
+  opacity: 0.89
+  border-radius: 5px
+  font-size: 14px
+  outline: none
+
+.delete-btn
+  background-color: $active-filter-btn
+
+.delete-all-btn
+    background-color: $color-dark-gray
+
+.checkbox-default
+  display: none
+
+.checkbox-custom
+  position: relative
+  width: 16px
+  height: 16px
+  background: $bgColor
+  border-radius: 3px
+  text-align: center
+
+.checkbox-custom,
+.label-checkbox
+  display: inline-block
+  vertical-align: middle
+
+.checkbox-default:checked + .checkbox-custom::before
+  content: " "
+  display: block
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  font-size: 12px
+  background-color: $accent
+  border-radius: 2px
+  background-image: url($images + 'check-icn.svg')
+  background-repeat: no-repeat
+  background-position: center
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  input, button
+    &.custom-btn
+      font-size: 16px
+      padding: 0 4px 0 12px
+    &.fb
+      padding: 0 4px 0 12px
+    &.custom-btn
+      height: 42px

@@ -1,0 +1,61 @@
+.acceptances
+  margin-top: 23px
+  border-top: 1px solid #2e383b
+  &.preview
+    margin-top: -8px
+    border-top: none
+    .header-title
+      margin-bottom: 20px
+
+  .header-title
+    .title, .post-filter
+      display: inline-block
+    .title
+      color: #ecf4fe
+      opacity: .5
+    .post-filter
+      width: inherit
+      margin-left: 54px
+  .acceptance
+
+    &.post-details
+      margin-bottom: 23px
+
+    .info-bar-details
+      > li
+        &:first-child
+          color: #7e858a
+
+    .media
+      border-bottom-left-radius: 5px
+
+@media all and (max-width: 768px)
+  .acceptances
+    border-top: none
+    .acceptance
+      margin-bottom: 6px
+
+      .info-bar-details > li:last-child
+        width: auto
+
+      .media
+        border-bottom-left-radius: 0
+
+@media all and (max-width: 544px)
+  .acceptances
+    .header-title
+      text-align: center
+      .title
+        display: none
+
+      .post-filter
+        width: 100%
+        margin-left: 0
+
+        &.acceptance
+          .button-link
+            width: 130px
+
+        .filter-list
+          display: flex
+          justify-content: space-between

@@ -1,0 +1,337 @@
+.post-view
+  +round(5px)
+  position: relative
+  background: #2e383c
+  width: 100%
+  margin-bottom: 30px
+
+.item
+  &.trophy
+    .views_count
+      background:
+        image: url($images + 'views-icn-gold.svg')
+        repeat: no-repeat
+        size: contain
+
+    .info-bar
+      .challenges:before
+        background:
+          image: url($images + 'post-icons/challenges-icn-gold.svg')
+          repeat: no-repeat
+          size: contain
+
+    .info-bar
+      .likes:before
+          background:
+            image: url($images + 'post-icons/like-empty-gold.svg')
+            repeat: no-repeat
+            size: contain
+
+    .info-bar
+      .likes
+        &.liked:before
+          background:
+            image: url($images + 'post-icons/like-filled-gold.svg')
+            repeat: no-repeat
+            size: contain
+
+    .info-bar
+      .comments:before
+        background:
+          image: url($images + 'post-icons/comments-gold.svg')
+          repeat: no-repeat
+          size: contain
+
+  .views_count
+    width: 18px
+    height: 12px
+    display: inline-block
+    margin: -1px 4px
+    opacity: .5
+    background:
+      image: url($images + 'eye.png')
+      repeat: no-repeat
+      size: contain
+    +pixel-ratio
+      background:
+        image: url($images + 'eye@2x.png')
+
+  .author-info
+    padding: 23px 23px 16px
+    .avatar
+      +round(10px)
+      height: 50px
+      width: 50px
+      opacity: 1
+      float: left
+      margin-right: 12px
+      background:
+        image: url($images_postIcons + 'default-avatar-105.png')
+        size: contain
+        repeat: no-repeat
+        position: 50%
+      img
+        +round(5px)
+        width: 50px
+        height: 50px
+    .name
+      color: #ecf4fe
+      font-size: 17px
+      font-weight: bold
+      margin-top: 5px
+    .additional
+      position: relative
+      color: rgba(236, 244, 254, .5)
+      font-size: 14px
+
+      &.relative
+        margin-top: -5px
+
+        .category-icons
+          position: relative
+          left: 40px
+          top: 5px
+
+        .views_count
+          width: 18px
+          height: 12px
+          display: inline-block
+          margin: -1px 4px
+          opacity: .5
+          background:
+            image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAAAAXNSR0IArs4c6QAAAzFJREFUSA3NV0tPU0EUnjn39pbaB7XIy0SkZeczuhEXRjfGV9TEBDe6dOFPcuGSlSQmhqgYNxgX4sa37qQEE4ECtfRh4fbeOZ7TZJrLlJZioukkzcx85/XdM2celWKPDRGt1aLIWJYY9ZU/YoGVQCn2sRuJ4jdhRcIWfV8s9CfEvJTS30sI2alyDjEGFXEGhTglUMU6spNQpgDvVVS8HZCy3InNroQoI/ZqyRsHsM8hqnAnTk0dKWFLKe91f9yeo4x5pjw4b0uoWMQDrlS3KSsDQaO/HVOwnIPwKJGQa618tCSUL+NxD9UNUgiZxvTFVaqbL55ysz2e8zOZFBXWKRREdNN2D9rgpKmejlFGI022AK6H7vRQLPzZlPF8R0IrxdpZkHCpyQBFRdrwqi8i3u2Wel7q9ao4jZ46T1Gipi+F6sVgIvTGxJsIrZbwghCKftubRPxYWv/xPJ1Ob26XtJ9ls9meeN+hKyjlyWZNmO2Py9kgvo3Q8oY7Tlv2clCBxr4l4UkqJj8Z+J6mVAInfFQ3ycgKGtIxMTPU68xprEFoqbR1xAFnQinVwBCFa4dgMhWRi9og2H/P53vjocRFWr5RxmmZFkq14suxVGqD52bLV3HEq6m7UgpHywAAXeVODcfD3xirB8+Vy0Mgo/dQKVsrUu+HbJhMRmQ2gDWGTKbX2X/fLFwu+A3314NWpFYKmxmwQnfIUSNTEsBTWHk4EIstA32VIzAyESTDrD3hPW5FhllxZkwyjDPGMh7v1AaTPfPsm2NoeT02cyAuQDvhGqWpTwu5R6/2jFL4NYiZY71MJs7zdjKWs2+OwWPdmANzAQ10Sw90pjyl3K0HCUk7dJWK/GgQM8dcwCam5+1krMO+OYbW5545MBeg9LpCVqe4sLQC7zRb2LcKVUxrzOx5N3EBmzhjLDNxPWef7Du4m+uxmQNxqe8yVu6qba/Zd9XBqEm1vDoAPpRyCzP/9erQpLrqctWk+PlBl8h1OrQax7yW6eeHVGLe8sRS8Pnh22IYQWTaPT/oSJymu7Hz54cO3FUPNE2KzpTuecJqUtx3zSM/SIrHlDFrrbQ1BhA+/C/+Bv0BOp/gQZdJIToAAAAASUVORK5CYII=)
+            repeat: no-repeat
+            size: contain
+
+  .title
+    a
+      display: block
+      padding: 0 23px
+      font-size: 18px
+      font-weight: 500
+      color: #e95f3a
+      &:hover
+        text-decoration: none
+
+  .description
+    padding: 0 23px
+    font-size: 18px
+    color: #ecf4fe
+    display: block
+    width: 100%
+    &.collapse
+      display: -webkit-box
+      overflow: hidden
+      text-overflow: ellipsis
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: 3
+
+  .expand
+    padding: 0 23px
+    font-size: 18px
+    color: rgba(236, 244, 254, 0.5)
+    cursor: pointer
+
+  .media
+    position: relative
+    margin-top: 16px
+    width: 100%
+    background: #2e383b
+    &.media-video
+      height: 342px
+    &.media-video-vertical
+      height: 816px
+      video
+        height: unset
+    &.media-photo
+      height: 475px
+    .max-width
+      img
+        width: 100%
+    .max-height
+      img
+        height: 100%
+    img
+      cursor: pointer
+      min-height: 100%
+      min-width: 100%
+      background:
+        color: $color-menu-li
+    video
+      width: 101%
+      //height: 100%
+    .video-container
+      cursor: pointer
+      height: 100%
+      width: 100%
+      text-align: center
+    .video-preview
+      +translate(-50%, -50%)
+      cursor: pointer
+      position: absolute
+      z-index: 1
+      width: 62px
+      height: 62px
+      top: 50%
+      left: 50%
+      background:
+        image: url($images + '/post/play.png')
+        size: contain
+        repeat: no-repeat
+        position: 50%
+      +pixel-ratio
+        background:
+          image: url($images + '/post/play@2x.png')
+
+  .info-bar
+    left: 0
+    bottom: 0
+    height: 55px
+    padding: 20px 23px
+    width: 100%
+
+    &.acceptance
+      .challenges
+        color: $color-font-button-opacity
+        &:before
+          background:
+            image: url($images_postIcons + 'challenges-icn.svg')
+
+    .info
+      position: relative
+      display: inline-block
+      padding: 0 25px
+      color: $color-white-transparent
+      font-size: 16px
+      line-height: 1.1
+      margin-right: -5px
+
+    .icons
+      cursor: pointer
+      &:before
+        position: absolute
+        display: block
+        content: ""
+        top: 0
+        left: 0
+        width: 18px
+        height: 18px
+        background:
+          repeat: no-repeat
+          size: contain
+          position: 50%
+
+    .likes
+      &:before
+        top: -1px
+        background:
+          image: url($images_postIcons + 'like.png')
+        +pixel-ratio
+          background:
+            image: url($images_postIcons + 'like@2x.png')
+      &.liked
+        &:before
+          background:
+            image: url($images_postIcons + 'like-active.png')
+          +pixel-ratio
+            background:
+              image: url($images_postIcons + 'like-active@2x.png')
+
+    .comments
+      &:before
+        background:
+          image: url($images_postIcons + 'comments.png')
+        +pixel-ratio
+          background:
+            image: url($images_postIcons + 'comments@2x.png')
+
+    .challenges
+      color: #e95f3a
+      &:before
+        background:
+          image: url($images_postIcons + 'challenges.png')
+        +pixel-ratio
+          background:
+            image: url($images_postIcons + 'challenges@2x.png')
+
+.more
+  position: relative
+  display: inline-block
+  &:before
+    display: block
+    content: "•••"
+    width: 100%
+    height: 20px
+    color: $color-white-transparent
+    cursor: pointer
+.more-menu
+  +round(5px)
+  +box-shadow(0px 2px 7px 0px #131212)
+  position: absolute
+  padding: 10px 0
+  bottom: 100%
+  right: 10%
+  display: none
+  background-color: #2e383c
+  white-space: nowrap
+  &.active
+    display: block
+
+  li
+    position: relative
+    width: 100%
+    padding: 5px 21px
+    text-align: left
+    cursor: pointer
+    color: $color-white
+    &:hover
+      background: #4b555a
+      text-decoration: none
+
+    span
+      display: block
+
+
+@media all and (max-width: 992px)
+  .item
+    .media
+      width: 100%
+
+      &.media-video, &.media-video-vertical
+        height: auto
+
+
+
+
+
+@media all and (max-width: 544px)
+  .post-view
+    margin-bottom: 16px
+
+  .item
+
+    .expand
+      padding: 0 10px
+
+    .author-info
+      padding: 10px
+
+    .title
+      a
+        padding: 0 10px
+
+    .description
+      padding: 0 10px
+
+    .info-bar
+      height: 45px
+      padding: 13px 10px
+
+    .media
+      &.media-photo
+        height: 221px
+        &.media-photo-vertical
+          height: 400px
+
+      .video-container
+        max-height: 363px

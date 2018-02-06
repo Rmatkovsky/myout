@@ -1,0 +1,357 @@
+$accent: #e95f3a
+
+body
+  font-family: Lato, sans-serif
+
+
+.header__nav
+  padding-top: 20px
+  height: 83px
+  background-color: #2e383c
+  color: #fff
+  font-weight: 300
+
+  &.show
+    height: auto
+
+  .header__logo
+    float: left
+
+  .container
+    position: relative
+
+  .header__hamburger
+    display: none
+    position: relative
+    float: left
+    width: 18px
+    height: 15px
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPCAYAAADphp8SAAAAAXNSR0IArs4c6QAAAFJJREFUOBFjfPf1f9t/Bobi////szGQARgZGX8xMjD0Mr75+v8zw///PGSYgdDCyPiFiYmBYTLIVIQoaSyQXpAZpOkaUqoZR2NtSMUXxLHDONYAzX86KrdUyV4AAAAASUVORK5CYII=') no-repeat
+    background-size: contain
+    z-index: 1
+
+  .header__no-connection
+    position: absolute
+    top: 10px
+    left: 0
+    right: 0
+    width: 200px
+    margin: 0 auto
+    font-size: 15px
+    padding-left: 45px
+
+    .no-connection-icon
+      position: absolute
+      width: 25px
+      height: 24px
+      left: 0
+      background: url('../img/alert.svg') no-repeat
+      background-size: contain
+
+  .header__registration
+    margin-top: 10px
+    float: right
+
+  .header__registration__link
+    color: $accent
+
+    &:hover
+      text-decoration: none
+      color: #fff
+
+
+  .header__loggined
+    float: right
+
+    .header__loggined__toolbar
+      display: inline-block
+      position: relative
+      bottom: 15px
+
+
+      .search
+        display: inline-block
+        width: 18px
+        height: 18px
+        margin-right: 25px
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAhtJREFUOBGVU01rE1EUPXcm2lo1mFjxY6/+gYIgSnEhuK2LFvEL6U78B271T+hK60JBShZCQXDdbSMWS6Eb3fiRpNDMjKXJzPXc6bzwZrSBPgj3vjnn3pz3zn2Cyuru6k0d4qEIrilwThR9Ur4iQKt5DC9EJKqU5FtxH3dUTw8SvFHVW+7bv1F+BoJHzeOyUsXyRtZkL8YqoBeNwH8dMqwTbKviAvMZhZ4qsIxq7zan5K3tS6sb60onytR+zFd3dvWST6DKo71YnxEb5rxYE3Iu+xzYnfhNWBSWCN6GjRY97nsPAjqRLhVKBlUlJWKx6Ub6seDvbev+cQ0KeN7rBedLfVI2i/zAQP6ygVR+JItxxREDs7jYtN3HcVEFaw73aqlof04MO+8I4yL5DYfT1R8uDyDYyDdKiynXAQfFTDDrMAk5qMWyRi3LOSfNXoKnDvhf7KueQYbHhgnkc2MS30c8qjhJ536NnIj0/gj0Eg7tNHmfnP2dROc8GDVOcZ/DtqiQlh0tBV5zXhZIWuZAtYchGkGKG4MYT6i77op5P6V5y5+IgdtUkgpe0tcJRx4X7RnRwYXpKcnHIXDkxglZCmqY4UP7QBKFlRfvZF0CmQ8hD4hnVF+jg+94xNvGHCnyy+w+0gRXM+CsWRzSnfoEttiAowP0/ug9zfCKzTjQMqCaeb/+ULldBe8yzU2K9PehiqvkXqJ32OwbzXr+F/1hKvlfFpt9AAAAAElFTkSuQmCC)
+        background-repeat: no-repeat
+        background-size: contain
+
+      .notification
+        display: inline-block
+        width: 18px
+        height: 18px
+        margin-right: 25px
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAZxJREFUOBGtVLFOwlAUPReIAqIMLA4aXURXBg2bm9HZ6GxMHFz9EH/AQWcTZ/0BE42JrBAXjcYYAyaQgkiV6721rY8ntItNmnveueec19e+V8KQi5kzjQ4OpLUp94IvuZN6VsjikIjefS4sFCIfNDpc5j5OAF60ez9jqlECO4UsXZn9gaDWBy/1PlEBcxoyKzGOxOQZJLzMhD3pZaTXHUuhNDVOVTPMw7KcZKPN13Wnz3WHa60uF22RctpTjWrVY2sgS9ryBW6zzct/BD6hPQlxPa14Al0iAGCsKWbGZX6CbkLeAtpTjUf7HsW/QcCsEvLSbrVGXYbG86g2DJJZ0p6Z0IoKMTWhxwyKNccIwieK0cW2/y2I3tq832dsywssMTgv2/9B1n4f9QhEmJc9NEegJgOVBOGUZE88CjkTZYzryeRPVO/wihyFDREPHJc4s9FnOTrnI82Ow9NdYN0w6P64yOXoxeQCnAqAXd0kivjiY5N3k7Qq46FBI79aKo2qrL0XBClWLhjbdWTQJNGr/EJ25ZfxrLdi5eyAYPwNgGmqy/cvTaUAAAAASUVORK5CYII=)
+        background-repeat: no-repeat
+        background-size: contain
+
+  .avatar
+    position: relative
+    border-radius: 10px
+    display: inline-block
+    width: 50px
+    height: 50px
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAzpJREFUaAXtWs9rE1EQnpekzSbWWjUildJqG+jFSyFKwVaLFevJf0H04FVBelDqvaCeFPwDxKuCt4LFShAvxeBVWipabIXUomKaNNk8Z5IsaWKyze7MtolkYLM/3sw3872Zl327+xSU5Nzk1Hge9DSAimmte63rzbhXSq0B6EUfqAfv5ufiFKOffkYnp+5h8M/wcBi3g3StyYViHNZKXesbjOZWV5bjijJhAiyA1r4mD752eErlMRsTgUI5aWhNEkQNE5BXMI0EVKw21Va6qmK+Zh/YjXQncWjdkqpi2CZS1SH7ftrOyL6noCqAdkaqOmTfTwNeRXAhnIPxcBainfmCi6VtH8RTHfA25Y1LcVRDabhzNANnQ7mKPjoTMoG2sXAAHm0EIa1VRTv3RHyMXO/Z/ofEziCJIOlIiyiRoY48XOnK7hoj6ZCupIgSOW1UlpNdoE507XCsNlEi/Q562YmuFazdXpTIeq5xOCe6dgSstsY9WxY2+0+ZwpOzjUa5yYlu2ar+kSiRj0gkkd6dzAfUIV1JESVCgT3eNOBbtj4stT1BHWmp79Glp42cgtvfw/DydyckzfJNj45f4LVb6yEgHWlRoxcva2nQnXiHfEX4n/iGwEsRn6JYwZ7Av+Iobkf8RSI/MCNLWFZ2ZWfZutmLEvGDhksHTLjanYG+QO1Er2JZvfoVhNd//GCCXJbESqsXA78b2YKBBm+KnzE7s8kQrAmNF5HBTvOmh8dTDZOg0jlZspGac7GJHMYxMHMsDV2lQe2kvsmGbAmDK2wiN3oyOKDdz2TJljC4wiJC5XEenwS5QhiExREWkTEBElbwXCwWkREDP0gICReLRSTCGBvV/LlYLCIGy7qSCheLFUpiS24qzsViTVGebgbxOxHASNAEw8V9hHKSxslkAp9NCliVSXJ0xiJCM9rZpPyzhSMGJWVWablx6JVNm4hXPesWt50Rtz3nld3/k5HiAhWv+mlvcIkDZkQv7o07L73gSiFaKgS4MMVLN55iY+zEwf91ZflL/6khE5cMTaBDudcankZfAi8m4P77+bnnhVkfkokPDEbfII0I1ls3qjX1mi0aE0rBgh/UTSJBtP4CE7Dhv6z4wMEAAAAASUVORK5CYII=)
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: 50%
+    z-index: 1
+    cursor: pointer
+
+    &:hover
+      .loggined-menu
+        display: block
+
+    &.show
+      display: block
+
+  .loggined-menu
+    display: none
+    position: absolute
+    right: 0
+    top: 100%
+    border-radius: 5px
+    box-shadow: 0 2px 7px 0 #131212
+    background-color: #2e383c
+    margin-right: 15px
+    padding: 10px 0
+    width: 135px
+
+    ul
+      padding: 0
+      margin-bottom: 0
+
+      li
+        position: relative
+        list-style-type: none
+        width: 100%
+
+        &:hover
+          background: #4b555a
+
+        a
+          display: inline-block
+          padding: 5px 24px
+          width: 100%
+          color: #ecf4fe
+          cursor: pointer
+          font-size: 14px
+          text-decoration: none
+
+          .loggined-menu__icon
+            display: none
+            position: absolute
+            left: 15px
+            width: 18px
+            height: 18px
+            background-size: contain
+            &.icon-user
+              background-image: url("../img/profile_icn.svg")
+            &.icon-direct
+              background-image: url("../img/directs_icn.svg")
+            &.icon-credits
+              background-image: url("../img/credits-icn.svg")
+            &.icon-notifications
+              background-image: url("../img/notification-r-icn.svg")
+            &.icon-notifications
+              background-image: url("../img/notification-r-icn.svg")
+            &.icon-settings
+              background-image: url("../img/settings-icn.svg")
+            &.icon-logout
+              background-image: url("../img/logout.svg")
+
+  .main-menu
+    transition: 1s
+    display: none
+    margin-top: 65px
+    position: relative
+    overflow: hidden
+
+    &.show
+      display: block
+
+    .main-menu__list
+
+      transition: transform .3s
+      transform: translateX(0%)
+
+      &.disabled
+        position: absolute
+        transform: translateX(-100%)
+
+      &.challenges
+        .change-chal-list
+          text-align: center
+
+    ul
+      padding: 0
+
+      li
+        position: relative
+        border-top: 1px solid rgba(236, 244, 254, 0.1)
+        list-style-type: none
+
+        a
+          display: block
+          color: #fff
+          cursor: pointer
+          font-size: 15px
+          text-decoration: none
+          padding: 10px 50px
+          opacity: 0.4
+
+          .main-menu__icon
+            position: absolute
+            left: 15px
+            width: 18px
+            height: 18px
+            background-size: contain
+
+            &.icon-feed
+              background-image: url("../img/news-feed-icn.svg")
+              background-repeat: no-repeat
+              background-position: center
+
+            &.icon-challenges
+              background-image: url("../img/challenges-icn.svg")
+              background-repeat: no-repeat
+
+            &.icon-trophy
+              background-image: url("../img/cup-icn.svg")
+              background-repeat: no-repeat
+
+            &.icon-arrow-left
+              background-image: url("../img/follow-arrow-icn.svg")
+              background-repeat: no-repeat
+              transform: rotate(180deg)
+
+          .go-chal
+            float: right
+
+            .icon-arrow-right
+              position: absolute
+              top: 12px
+              right: 10px
+              width: 18px
+              height: 18px
+              background-image: url("../img/follow-arrow-icn.svg")
+              background-size: contain
+              background-repeat: no-repeat
+
+    .main-menu__search_wrap
+      position: relative
+
+      .search-icon
+        position: absolute
+        width: 18px
+        height: 18px
+        top: 13px
+        left: 10px
+        background-image: url("../img/search-icn.svg")
+        background-size: contain
+
+      .main-menu__search
+        display: block
+        width: 100%
+        color: #fff
+        padding: 8px 35px
+        font-size: 17px
+        font-weight: bold
+        line-height: 1
+        border-radius: 10px
+        background-color: #1f282b
+        border: 2px solid #1f282b
+        outline: none
+
+        &::-webkit-input-placeholder
+          opacity: 0.5
+
+        &::-moz-placeholder
+          opacity: 0.5
+
+        &:-ms-input-placeholder
+          opacity: 0.5
+
+        &:-moz-placeholder
+          opacity: 0.5
+
+
+
+/**********************************/
+/***** FOR width 768px ************/
+/**********************************/
+@media only screen and (max-width: 768px)
+  .header__nav
+    height: 52px
+
+    &.show
+      border-radius: 0 0 10px 10px
+
+    .main-menu
+      margin-top: 40px
+
+    .header__hamburger
+      display: block
+
+    .loggined-menu
+      position: static
+      right: auto
+      width: auto
+      box-shadow: none
+      margin: 40px -15px 0px -15px
+      padding: 0
+      border-radius: 0 0 10px 10px
+
+      ul
+        li
+          padding: 0
+          border-top: 1px solid rgba(236, 244, 254, 0.1)
+          a
+            display: block
+            padding: 10px 50px
+            opacity: 0.4
+
+            .loggined-menu__icon
+              display: block
+
+    .header__logo
+      float: none
+      position: absolute
+      left: 0
+      right: 0
+      text-align: center
+      margin-top: -5px
+      img
+        width: 94px
+        height: auto
+
+    .header__registration
+      float: none
+      text-align: center
+
+    .header__loggined
+      .header__loggined__toolbar
+        display: none
+
+      .avatar
+        margin-top: -7px
+        width: 30px
+        height: 30px
+
+
+/**********************************/
+/***** FOR width 544px ************/
+/**********************************/
+@media only screen and (max-width: 544px)
+  .header__nav
+    .main-menu
+      .main-menu__search_wrap
+
+        .search-icon
+          top: 8px
+          left: 10px
+
+        .main-menu__search
+          padding: 4px 35px

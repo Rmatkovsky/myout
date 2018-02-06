@@ -1,0 +1,134 @@
+.follow
+  .post-filter
+    text-align: center
+
+.m-profile-container
+  display: none
+  margin-top: -51px
+
+  .c-profile
+    text-align: left
+
+    .c-profile__name
+      margin-top: 0
+
+    .avatar
+      float: left
+      margin-right: 30px
+
+      img
+        width: 152px
+        height: 152px
+        border-radius: +round(10px)
+        object-fit: cover
+
+    .c-profile__group
+      display: flex
+      align-items: center
+
+    .c-profile__followers, .c-profile__following
+      text-align: center
+
+    .c-profile__followers
+      padding-left: 0
+
+    .c-profile__follow-btn
+      margin-left: 40px
+
+      &.unfollow
+        background-color: rgba(236, 244, 254, 0.1)
+
+
+@media all and (max-width: 768px)
+  .m-profile-container
+    display: block
+
+    .c-profile
+
+      .c-profile__name:last-of-type
+        display: none
+
+      .c-profile__name
+        &.phone
+          display: none
+
+
+
+@media all and (max-width: 544px)
+  .m-profile-container
+    margin-top: -30px
+
+    .c-profile
+      padding: 16px
+
+      .follow-btn
+        margin-top: 7px
+
+      .avatar
+        width: 93px
+        height: 93px
+        margin-right: 16px
+
+        img
+          width: 93px
+          height: 93px
+
+      .c-profile__group
+        align-items: center
+        flex-direction: column
+
+      .c-profile__follow
+        margin-top: 0
+
+      .c-profile__follow-btn
+        margin:
+          top: 8px
+          left: 0
+        padding: 8px 47px
+
+      .c-profile__name
+        &.tablet
+          display: none
+
+        &.phone
+          margin-top: 15px
+          display: block
+
+      .c-profile__status
+        margin-top: 10px
+
+
+
+  .search__results__list
+    li
+      padding: 10px
+
+    .c-search__item
+      display: block
+      min-height: 77px
+
+      .c-search__item__user
+        .avatar
+          width: 70px
+          height: 70px
+          float: left
+
+          img
+            width: 70px
+            height: 70px
+
+        .c-search__item__name
+          margin-top: 0
+          font-size: 17px
+
+        .c-search__item__additional
+          font-size: 12px
+
+      .follow-btn
+        width: 100px
+        margin-top: 4px
+        padding: 3px 0
+
+
+
+

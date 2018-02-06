@@ -1,0 +1,62 @@
+footer
+  bottom: 0
+  position: absolute
+  height: 80px
+  padding: 0
+  width: 100%
+  margin-top: -80px
+
+  ul
+    li
+      float: left
+      padding-right: 5px
+      a
+        font-size: 14px
+        opacity: .5
+        color: $color-white
+        cursor: pointer
+        &:hover
+          text-decoration: none
+        &:after
+          content: '·'
+          padding: 0 5px
+    li:last-child
+      a
+        &:after
+          content: ''
+          padding: 0
+          cursor: pointer
+
+  .copyright
+    //font-family: $fontFamilyOpenSans
+    font-size: 14px
+    opacity: .5
+    color: $color-white
+
+
+/**********************************/
+/***** FOR width 767px ************/
+/**********************************/
+@media only screen and (max-width: 767px)
+  footer
+    position: absolute
+    height: 72px
+    margin-top: 15px
+    ul
+      width: 275px
+      margin: 0 auto 10px auto
+      li
+        a
+          font-size: 12px
+          &:after
+            padding-right: 4px
+    .pull-left, .pull-right
+      height: 20px
+      width: 100%
+      text-align: center
+      margin-bottom: 10px
+      float: inherit !important
+
+    .copyright
+      font-size: 10px
+      padding-bottom: 15px
