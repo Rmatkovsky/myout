@@ -28,6 +28,9 @@ class SignUpPage extends Component {
 
         this.requiredPasswordRepeat = this.requiredPasswordRepeat.bind(this);
         this.handleClosePopup = this.handleClosePopup.bind(this);
+
+        this.requiredEmail = requiredCustom('Please enter email');
+        this.validEmail = isEmailCustom('Please enter a valid email');
     }
 
     componentWillUpdate(nextProps) {
@@ -127,8 +130,8 @@ class SignUpPage extends Component {
                       customErrors={user.errorData.data ? user.errorData.data.email : []}
                       turnOnError
                       validate={[
-                          requiredCustom('Please enter email'),
-                          isEmailCustom('Please enter a valid email'),
+                        this.requiredEmail,
+                        this.validEmail
                       ]}
                     />
                     <Field
