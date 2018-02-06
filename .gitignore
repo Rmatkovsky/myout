@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+.eslintcache
+public
+node_modules
+flightplan.js
+package-lock.json
+develop/markup/header-menu/.sass-cache
+/dist/
