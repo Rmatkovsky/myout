@@ -31,6 +31,11 @@ class SignUpPage extends Component {
 
         this.requiredEmail = requiredCustom('Please enter email');
         this.validEmail = isEmailCustom('Please enter a valid email');
+
+
+        this.requiredPassword = requiredCustom('Please enter your password');
+        this.validPassword = isPasswordCustom('Password should be 8 or more characters long with at least 1 digit');
+
     }
 
     componentWillUpdate(nextProps) {
@@ -143,8 +148,8 @@ class SignUpPage extends Component {
                       placeholder="Password"
                       turnOnError
                       validate={[
-                          requiredCustom('Please enter your password'),
-                          isPasswordCustom('Password should be 8 or more characters long with at least 1 digit'),
+                        this.requiredPassword,
+                        this.validPassword
                       ]}
                     />
                     <Field
